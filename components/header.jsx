@@ -1,49 +1,58 @@
 import React from 'react'
 
+let headStyle={
+  header:{display:"inlineBlock",height:"8em",backgroundColor:"lightblue"},
+  headTopDiv:{display:"inline-block",height:"1em"},
+  img:{width:"3em",padding:"1em 0 0 1em"},
+  input:{width:"20em",height:"2.5em",fontSize:"14px", marginLeft:"1em"},
+  select:{width:"12em",height:"4em",margin:"0px"},
+  searchInput:{width:"20em",height:"2em",fontSize:"14px", marginLeft:"0em"},
+  aTag:{padding:"10px",textDecoration:"none",color:"black"},
+  button:{width:"32px",height:"32px",paddingRight:"30px"},
+  lastButton:{width:"24px"}
 
+}
 export default class Header extends React.Component{
   constructor(props){
     super();
   }
   render(){
     return(
-      <header style={{display:"block",height:"8em",backgroundColor:"lightblue"}}>
-        <div style={{display:"inline-block",height:"1em"}}>
-          <img src="../src/img/Icon.png" style={{width:"3em",padding:"1em"}}></img>
-          <input type="text" placeholder="Search for anything" style={{width:"15em",height:"2em",fontSize:"1em",margin:"1em"}}></input>
-          <select style={{width:"12em",height:"4.5em",margin:"0px"}} >
+      <header style={headStyle.header}>
+
+        <div style={headStyle.headTopDiv}>
+          <img src="../src/img/Icon.png" style={headStyle.img}></img>
+          <input type="text" placeholder="Search for anything" style={headStyle.input}></input>
+          <select style={headStyle.select}>
             <option value ="dolphin">Dolphin</option>
             <option value ="dragon">Dragon</option>
             <option value="zane">Zane</option>
             <option value="lia">Lia</option>
           </select>
-          <input type="map"></input>
-          <button type="button" >ddd</button>
-          <a href="#" style={{}}>FR</a>
-          <a href="#" style={{}}>Register<span>or</span></a>
-          <a href="#">Sign in</a>
-          <button type="submit">Post ad</button>
+          <input type="text" style={headStyle.searchInput}></input>
+          <button type="button" style={headStyle.button}><img src="../src/img/10.png" style={{width:"24px",height:"24px"}}></img></button>
+          <a href="#" style={{padding:"1em"}}>FR</a>
+          <a href="#" style={{padding:"1em"}}>Register<span>or</span></a>
+          <a href="#" style={{padding:"1em"}}>Sign in</a>
+          <button type="submit"><img src="..//src/img/good.jpg" style={headStyle.lastButton}></img></button>
         </div>
 
-        <div style={{display:"inline-block"}}>
-          <div style={{display:"flex"}}>
-            <a href="#">Buy & Sell</a>
-            <a href="#">Car & Vehicles</a>
-            <a href="#">Real Estate</a>
-            <a href="#">Jobs</a>
-            <a href="#">Service</a>
-            <a href="#">Pets</a>
-            <a href="#">Vacation Rental</a>
-            <a href="#">Community</a>
+        <div style={{paddingTop:"40px"}}>
+          <div style={{display:"flex",justifyContent:"space-around",flexWrap:"wrap"}}>
+            <a href="#" style={headStyle.aTag}>Buy & Sell</a>
+            <a href="#" style={headStyle.aTag}>Car & Vehicles</a>
+            <a href="#" style={headStyle.aTag}>Real Estate</a>
+            <a href="#" style={headStyle.aTag}>Jobs</a>
+            <a href="#" style={headStyle.aTag}>Service</a>
+            <a href="#" style={headStyle.aTag}>Pets</a>
+            <a href="#" style={headStyle.aTag}>Vacation Rental</a>
+            <a href="#" style={headStyle.aTag}>Community</a>
           </div>
 
-          <div>
-            <img src="../src/img/Icon.png" style={{width:"1em",padding:"1em"}}></img>
-            <button type="button">About Us</button>
-            <button type="button" style={{border:"0px"}}>?</button>
-        </div>
+          
 
       </div>
+
       </header>
     )
   }
